@@ -6,13 +6,13 @@ class Node {
         float voltage;
 
     public:
-        //Constructor
-        Node(int nodeId, float voltage);
+        // Constructor
+        Node(int nodeId);
 
-        //Getters
+        // Getters
         int getId() const;
-        float getVolatge() const;
+        float getVoltage() const;
 
-        //Setters
-        void setVolatge(float v);
+        // Setters
+        void setVoltage(float v);
 };

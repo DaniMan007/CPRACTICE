@@ -5,6 +5,7 @@
 class Component {
     // 'protected' variables in classes just simply mean that the child classes can modify them but are 'protected' from the outside world
     protected:
+        // '::' is a scope resolution operator which tells the compiler that the function on the right belongs to the class on the left
         std::string Name;
         Node* node01;
         Node* node02;
@@ -15,7 +16,7 @@ class Component {
         Component(std::string compName, Node* n01, Node* n02, float value);
 
         // Virtual destructor to prevent memory leaks
-        // The 'virtual' keyword ensures that the system treats everything with uniformity
+        // The 'virtual' keyword ensures that the compiler treats everything with uniformity
         virtual ~Component() = default;
 
         // Getters
