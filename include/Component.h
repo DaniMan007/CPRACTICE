@@ -1,11 +1,11 @@
 #pragma once
 #include "Node.h"
-#include <string>
 
 class Component {
     // 'protected' variables in classes just simply mean that the child classes can modify them but are 'protected' from the outside world
     protected:
         // '::' is a scope resolution operator which tells the compiler that the function on the right belongs to the class on the left
+        // The variables; 'node01' & 'node02' are merely just addresses while the '*' are pointers
         std::string Name;
         Node* node01;
         Node* node02;

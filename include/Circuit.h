@@ -18,8 +18,8 @@ class Circuit {
         void addComponent(Component* component);
 
         // Calculations and the Workload
-        void findNodeVolatge();
         void buildAdmittanceMatrix();
+        void findNodeVolatge();
         void findMeshCurrent();
 
         // Display of results
