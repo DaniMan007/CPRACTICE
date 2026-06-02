@@ -1,5 +1,6 @@
 #pragma once
 #include "Node.h"
+#include <string>
 
 class Component {
     // 'protected' variables in classes just simply mean that the child classes can modify them but are 'protected' from the outside world
@@ -26,7 +27,8 @@ class Component {
         Node* get02() const;
         float getValue() const;
         virtual float getConductance() const = 0;
+        virtual float getResistance() const = 0;
 
         // Prints component details onto the console
-        virtual void PrintOut() const;
+        virtual void PrintOut() const = 0;
 };

@@ -7,6 +7,8 @@ class Circuit {
     private:
         std::vector<Node*> nodes;
         std::vector<Component*> components;
+        std::vector<std::vector<float>> Y_Matrix;
+        std::vector<std::vector<float>> Z_Matrix;
 
     public:
         // Constructor & Deconstructor
@@ -19,6 +21,7 @@ class Circuit {
 
         // Calculations and the Workload
         void buildAdmittanceMatrix();
+        void buildImpedanceMatrix();
         void findNodeVolatge();
         void findMeshCurrent();
 

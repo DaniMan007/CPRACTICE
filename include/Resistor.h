@@ -8,5 +8,6 @@ class Resistor: public Component{
         
         // Override to ensure the function gets written correctly and no mispells
         float getConductance() const override;
+        float getResistance() const override;
         void PrintOut() const override;
 };
