@@ -63,15 +63,12 @@ void Circuit::buildAdmittanceMatrix() {
         std::cout << ' \n';
     };
 };
-
 void Circuit::findNodeVolatge() {
     std::cout << "\n1st Gaussian Elimination belongs here\n";
 };
-
 void Circuit::findMeshCurrent() {
     std::cout << "\n2nd Gaussian Elimination belongs here\n";
 };
-
 void Circuit::printResult() {
     std::cout << "Just checking\n";
     for(int l = 0; l < components.size(); l++) {
