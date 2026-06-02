@@ -2,10 +2,11 @@
 #include "Node.h"
 #include "Resistor.h"
 #include "VoltageSource.h"
+#include "CurrentSource.h"
 #include "Circuit.h"
 
 int main() {
-    std::cout << "\n---Simulation Build---\n";
+    std::cout << "\n--- Simulation Build In Process ---\n";
 
     // Create a circuit manager for your simulation
     Circuit Circuit001;
@@ -28,8 +29,10 @@ int main() {
     Component* R2 = new Resistor("R2", nodeA, ground, 15.00);
     Component* R3 = new Resistor("R3", nodeA, nodeB, 7.53);
     Component* R4 = new Resistor("R4", nodeB, ground, 14.60);
-    Component* R5 = new Resistor("R5", nodeB, ground, 33.41);
+    Component* R5 = new Resistor("R5", nodeB, nodeC, 33.41);
+    Component* R6 = new Resistor("R6", nodeC, ground, 31.22);
     Component* V1 = new VoltageSource("V1", ground, nodeA, 40.00);
+    Component* I1 = new CurrentSource("I1", nodeB, ground, 6.00);
 
     // Add the components to the ciruit manager
     Circuit001.addComponent(R1);
@@ -37,13 +40,19 @@ int main() {
     Circuit001.addComponent(R3);
     Circuit001.addComponent(R4);
     Circuit001.addComponent(R5);
+    Circuit001.addComponent(R6);
     Circuit001.addComponent(V1);
+    Circuit001.addComponent(I1);
 
     // Execution of the simulation
     Circuit001.buildAdmittanceMatrix();
+    Circuit001.buildImpedanceMatrix();
     Circuit001.findNodeVolatge();
     Circuit001.findMeshCurrent();
     Circuit001.printResult();
+
+    // Build Successful
+    std::cout << "\n--- Simulation Build Successful ---\n";
 
     return 0;
 };

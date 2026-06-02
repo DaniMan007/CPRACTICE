@@ -2,7 +2,8 @@
 #include "iostream"
 
 // The constructor for initializing the protected variables
-Component::Component(std::string compName, Node* n01, Node* n02, float value) {};
+Component::Component(std::string compName, Node* n01, Node* n02, float value):
+    Name(compName), node01(n01), node02(n02), value(value) {};
 
 // Handles the getters
 std::string Component::getName() const {

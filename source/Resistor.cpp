@@ -13,12 +13,17 @@ float Resistor::getConductance() const {
     // If no errors will be encountered:
     return 1 / value;
 };
+/// @brief Gets the resistance of the resistor
+/// @return The resistance value
+float Resistor::getResistance() const {
+    return value;
+}
 
 // The print function
 void Resistor::PrintOut() const {
     // Calling the base class to print out the basic details
-    Component:PrintOut();
+    Component::PrintOut();
 
     // Adding extra component information
-    std::cout << "Resistance is: " << value << " Ohms\n";
+    std::cout << ", Resistance is: " << value << " Ohms" << std::endl;
 };

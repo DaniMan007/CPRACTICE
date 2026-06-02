@@ -10,12 +10,18 @@ float VoltageSource::getConductance() const {
     // An ideal voltage source has zero resistance
     return 1e20;
 };
+/// @brief Gets the resistance of the voltage source
+/// @return The resistance value
+float VoltageSource::getResistance() const {
+    // An ideal voltage source has zero resistance
+    return 0.0;
+};
 
 // The print function
 void VoltageSource::PrintOut() const {
     // Calling the base class to print out the basic details
-    Component:PrintOut();
+    Component::PrintOut();
 
     // Adding extra component information
-    std::cout << "Voltage is: " << value << " Volts\n";
+    std::cout << ", Voltage is: " << value << " Volts" << std::endl;
 };

@@ -9,5 +9,6 @@ class VoltageSource: public Component {
         // Override to ensure the function gets written correctly and no mispells
         // Note: Ideal volatage sources have infinite conductance
         float getConductance() const override;
+        float getResistance() const override;
         void PrintOut() const override;
 };
