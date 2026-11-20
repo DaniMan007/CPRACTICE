@@ -156,7 +156,7 @@ void Circuit::buildImpedanceMatrix() {
 
 };
 
-void Circuit::findNodeVoltage() {
+void Circuit::findSolutions() {
     std::cout << "\n1st Gaussian Elimination Operation\n";
     
     // Total active unknowns = (Active Nodes) + (Voltage Source Currents)

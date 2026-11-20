@@ -43,7 +43,7 @@ int main() {
     // Execution of the simulation
     Circuit001.buildAdmittanceMatrix();
     Circuit001.buildImpedanceMatrix();
-    Circuit001.findNodeVoltage();
+    Circuit001.findSolutions();
     Circuit001.printResult();
 
     // Build Successful

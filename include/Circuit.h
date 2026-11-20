@@ -25,8 +25,7 @@ class Circuit {
         // Calculations and the Workload
         void buildAdmittanceMatrix();
         void buildImpedanceMatrix();
-        void findNodeVoltage();
-        void findMeshCurrent();
+        void findSolutions();
 
         // Display of results
         void printResult();
