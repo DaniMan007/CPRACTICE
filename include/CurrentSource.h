@@ -8,6 +8,7 @@ class CurrentSource: public Component {
 
         // Override to ensure the function gets written correctly and no mispells
         // Note: Ideal current sources have infinite resistance, thus zero conductance
+        float getCurrent() const;
         float getConductance() const override;
         float getResistance() const override;
         void PrintOut() const override;

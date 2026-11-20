@@ -5,6 +5,11 @@
 CurrentSource::CurrentSource(std::string compName, Node* n01, Node* n02, float current):
     Component(compName, n01, n02, current) {};
 
+// Defining the current getter
+float CurrentSource::getCurrent() const {
+    return value;
+};
+
 // Defining the getter
 float CurrentSource::getConductance() const {
     // An ideal current source has infinite resistance

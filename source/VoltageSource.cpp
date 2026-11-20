@@ -5,6 +5,11 @@
 VoltageSource::VoltageSource(std::string compName, Node* n01, Node* n02, float voltage):
     Component(compName, n01, n02, voltage) {};
 
+// Defining the current getter
+float VoltageSource::getVoltage() const {
+    return value;
+}
+
 // Defining the getter
 float VoltageSource::getConductance() const {
     // An ideal voltage source has zero resistance
