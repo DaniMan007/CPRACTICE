@@ -17,28 +17,31 @@ int main() {
     Node* nodeA = new Node(1);
     Node* nodeB = new Node(2);
     Node* nodeC = new Node(3);
+    Node* nodeD = new Node(4);
 
     // Add the nodes to the circuit manager
     Circuit001.addNode(ground);
     Circuit001.addNode(nodeA);
     Circuit001.addNode(nodeB);
     Circuit001.addNode(nodeC);
+    Circuit001.addNode(nodeD);
 
     // Create the circuit components
-    Component* R1 = new Resistor("Resistor R1", nodeA, ground, 6);
-    Component* R2 = new Resistor("Resistor R2", ground, nodeB, 5);
-    Component* R3 = new Resistor("Resistor R3", nodeC, nodeB, 3);
-    Component* V1 = new VoltageSource("V1", nodeB, nodeA, 10.00);
-    Component* I1 = new CurrentSource("I1", nodeA, nodeC, 2.00);
-    Component* I2 = new CurrentSource("I2", ground, nodeC, 4.00);
+    Component* R1 = new Resistor("Resistor R1", nodeA, nodeB, 5);
+    Component* R2 = new Resistor("Resistor R2", nodeC, nodeB, 10);
+    Component* R3 = new Resistor("Resistor R3", nodeB, nodeD, 6);
+    Component* R4 = new Resistor("Resistor R4", nodeD, ground, 4);
+    Component* V1 = new VoltageSource("V1", ground, nodeA, 15.00);
+    Component* V2 = new VoltageSource("V2", ground, nodeC, 10.00);
 
     // Add the components to the ciruit manager
     Circuit001.addComponent(R1);
     Circuit001.addComponent(R2);
     Circuit001.addComponent(R3);
+    Circuit001.addComponent(R4);
     Circuit001.addComponent(V1);
-    Circuit001.addComponent(I1);
-    Circuit001.addComponent(I2);
+    Circuit001.addComponent(V2);
+
     
     // Execution of the simulation
     Circuit001.buildAdmittanceMatrix();
